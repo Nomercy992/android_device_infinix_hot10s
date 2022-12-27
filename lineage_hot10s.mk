@@ -34,7 +34,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := hot10s
-PRODUCT_NAME := nad_hot10s
+PRODUCT_NAME := lineage_hot10s
 PRODUCT_BRAND := Infinix
 PRODUCT_MODEL := Infinix Hot 10S
 PRODUCT_MANUFACTURER := Infinix
