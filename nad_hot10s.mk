@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/aosp/config/common.mk)
+$(call inherit-product, vendor/nusantara/config/full_phone_common.mk)
 IS_PHONE := true
 WITH_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
@@ -36,7 +36,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := hot10s
-PRODUCT_NAME := aosp_hot10s
+PRODUCT_NAME := nad_hot10s
 PRODUCT_BRAND := Infinix
 PRODUCT_MODEL := Infinix Hot 10S
 PRODUCT_MANUFACTURER := Infinix
@@ -44,7 +44,7 @@ PRODUCT_MANUFACTURER := Infinix
 PRODUCT_GMS_CLIENTID_BASE := android-infinix
 TARGET_VENDOR := infinix
 TARGET_VENDOR_PRODUCT_NAME := hot10s
-PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="sys_tssi_64_infinix-user 11 RP1A.200720.011 91261 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="sys_tssi_64_infinix-user 11 RP1A.200720.011 237644 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := Infinix/X689B-GL/Infinix-X689B:11/RP1A.200720.011/210326V181:user/release-keys
+BUILD_FINGERPRINT := Infinix/X689-GL/Infinix-X689:11/RP1A.200720.011/220210V480:user/release-keys
