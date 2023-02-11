@@ -15,8 +15,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-   $(LOCAL_DIR)/lineage_hot10s.mk
+   $(LOCAL_DIR)/arrow_hot10s.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_hot10s-userdebug \
-    lineage_hot10s-eng
+    arrow_hot10s-userdebug \
+    arrow_hot10s-eng
