@@ -24,6 +24,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/arrow/config/common_full_phone.mk)
+DEVICE_MAINTAINER := Nomercy992
 IS_PHONE := true
 WITH_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
