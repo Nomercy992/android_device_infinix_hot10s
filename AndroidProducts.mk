@@ -18,5 +18,4 @@ PRODUCT_MAKEFILES := \
    $(LOCAL_DIR)/arrow_hot10s.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_hot10s-userdebug \
-    arrow_hot10s-eng
+    arrow_hot10s-userdebug
