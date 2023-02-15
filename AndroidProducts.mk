@@ -15,7 +15,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-   $(LOCAL_DIR)/arrow_hot10s.mk
+   $(LOCAL_DIR)/nad_hot10s.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_hot10s-userdebug
+    nad_hot10s-userdebug \
+    nad_hot10s-eng
