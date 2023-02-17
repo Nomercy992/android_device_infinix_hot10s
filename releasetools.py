@@ -41,5 +41,4 @@ def AddImage(info, input_zip, basename, dest):
 def OTA_InstallEnd(info, input_zip):
   info.script.Print("Patching device-tree and verity images...")
   AddImage(info, input_zip, "vbmeta.img", "/dev/block/platform/bootdevice/by-name/vbmeta")
-  AddImage(info, input_zip, "dtbo", "/dev/block/platform/bootdevice/by-name/dtbo")
   return
