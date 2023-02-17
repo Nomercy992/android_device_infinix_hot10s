@@ -78,7 +78,7 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor    
 
-# fastbootd
+# Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
     

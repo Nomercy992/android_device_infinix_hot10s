@@ -32,12 +32,6 @@ IS_PHONE := true
 WITH_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
 
-#
-# All components inherited here go to system_ext image
-#
-$(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := hot10s
 PRODUCT_NAME := nad_hot10s
