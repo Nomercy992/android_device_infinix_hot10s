@@ -1,0 +1,1 @@
+require board=X689B | X689 | FULL-64
