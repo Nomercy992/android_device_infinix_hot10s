@@ -113,6 +113,7 @@ BOARD_MAIN_SIZE := 9122611200
 BOARD_MAIN_PARTITION_LIST := product system system_ext
 
 # Assert
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 TARGET_OTA_ASSERT_DEVICE := X689B,X689,FULL-64
 
 # Verified Boot
