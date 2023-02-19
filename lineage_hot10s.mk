@@ -23,8 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
-USE_PIXEL_CHARGING := true
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 DEVICE_MAINTAINER := Nomercy992
 
 # Gapps
@@ -34,7 +33,7 @@ TARGET_GAPPS_ARCH := arm64
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := hot10s
-PRODUCT_NAME := nad_hot10s
+PRODUCT_NAME := lineage_hot10s
 PRODUCT_BRAND := Infinix
 PRODUCT_MODEL := Infinix Hot 10S
 PRODUCT_MANUFACTURER := Infinix
