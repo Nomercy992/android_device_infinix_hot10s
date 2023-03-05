@@ -15,7 +15,7 @@
 #
 
 DEVICE_PATH := device/infinix/hot10s
-X689_PREBUILT := device/infinix/x689-prebuilt
+HOT10S_PREBUILT := device/infinix/hot10s-prebuilt
 
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
@@ -61,7 +61,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Dynamic Partitions
 PRODUCT_SHIPPING_API_LEVEL := 30
 PRODUCT_TARGET_VNDK_VERSION := 30
-PRODUCT_EXTRA_VNDK_VERSIONS := 30
 PRODUCT_BUILD_SUPER_PARTITION := true
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -122,6 +121,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NfcNci
 
+# ImsInit hack
+PRODUCT_PACKAGES += \
+    ImsInit
+
 # KPOC
 PRODUCT_PACKAGES += \
     libsuspend \
@@ -145,6 +148,15 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     WifiOverlay \
     TetheringConfigOverlay
+
+# APN's
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
+
+# permission move to system
+ $(DEVICE_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
+$(DEVICE_PATH)/configs/permissions/com.mediatek.ims.plugin.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.mediatek.ims.plugin.xml \
+    $(DEVICE_PATH)/configs/permissions/com.mediatek.wfo.legacy.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.mediatek.wfo.legacy.xml
 
 # [DNM] Temp permissions
 PRODUCT_COPY_FILES += \
