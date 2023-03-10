@@ -188,5 +188,5 @@ BUILD_BROKEN_DUP_RULES := true
 BOARD_VNDK_VERSION := current
 
 # VINTF
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/config/vintf/manifest.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/config/vintf/compatibility_matrix.device.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.device.xml
