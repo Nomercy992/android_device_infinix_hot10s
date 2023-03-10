@@ -55,8 +55,7 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 # Dynamic Partitions
 PRODUCT_SHIPPING_API_LEVEL := 30
@@ -79,12 +78,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
-
-AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_vendor=true \
-    POSTINSTALL_PATH_vendor=bin/checkpoint_gc \
-    FILESYSTEM_TYPE_vendor=ext4 \
-    POSTINSTALL_OPTIONAL_vendor=true
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
@@ -144,6 +137,9 @@ PRODUCT_BOOT_JARS += \
     mediatek-telephony-base \
     mediatek-telephony-common
 
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
+
 # WiFi
 PRODUCT_PACKAGES += \
     WifiOverlay \
@@ -152,11 +148,6 @@ PRODUCT_PACKAGES += \
 # APN's
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
-
-# permission move to system
- $(DEVICE_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
-$(DEVICE_PATH)/configs/permissions/com.mediatek.ims.plugin.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.mediatek.ims.plugin.xml \
-    $(DEVICE_PATH)/configs/permissions/com.mediatek.wfo.legacy.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.mediatek.wfo.legacy.xml
 
 # [DNM] Temp permissions
 PRODUCT_COPY_FILES += \

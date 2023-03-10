@@ -23,8 +23,6 @@
         manifest_mmservice.xml
         manifest_nwk_opt.xml
         manifest_gnss.xml
-        manifest_tranlog.xml
-        manifest_tranlogconfig.xml
         manifest.xml
 -->
 <manifest version="2.0" type="device" target-level="5">
@@ -584,26 +582,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.0::ISupplicant/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.transsion.hardware.tranlog</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ITranLog</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ITranLog/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.transsion.hardware.tranlogconfig</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ITranLogConfig</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ITranLogConfig/default</fqname>
     </hal>
     <sepolicy>
         <version>30.0</version>
